@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Async Await </title>
+</head>
+<body>
+
+<script>
+
+// Step 1: Create a function that returns a Promise
+function getData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Data received successfully!");
+        }, 5000); // waits for 5 seconds
+    });
+}
+
+// Step 2: Create an async function
+async function fetchData() {
+    console.log("Fetching data...");
+
+    // Step 3: Use await to wait for the Promise
+    let result = await getData();
+
+    console.log(result);
+    console.log("Task completed.");
+}
+
+// Step 4: Call the async function
+fetchData();
+
+</script>
+
+</body>
+</html>

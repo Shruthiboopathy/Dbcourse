@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>events</title>
+  </head>
+
+  <body id="body_ev">
+    <button id="buttn">click here</button>
+    <button id="buttn1">press</button>
+    <input id="int" type="text" placeholder="Type here" />
+    <label id="lbl">hello</label>
+    <div
+      id="div_el"
+      style="width: 200px; height: 200px; background-color: aqua"
+    >
+      <p id="para">para</p>
+    </div>
+    <script>
+      document.getElementById("buttn").addEventListener("click", cli);
+      function cli() {
+        alert("hai");
+      }
+
+      document
+        .getElementById("buttn")
+        .addEventListener("click", function cli() {
+          alert("hai");
+        });
+      var btn1 = document.getElementById("buttn");
+
+      btn1.onclick = function cli() {
+        alert("hai");
+      };
+
+      var div1 = document.getElementById("div_el");
+
+      div1.addEventListener("mouseenter", function mouseed() {
+        div1.style.backgroundColor = "red";
+      });
+
+      div1.addEventListener("mouseout", function mouseed() {
+        div1.style.backgroundColor = "cyan";
+      });
+      div1.addEventListener("click", function mouseed(e) {
+        console.log(e.clientX);
+        console.log(e.target.value);
+
+        div1.style.transform = "translate(200px)";
+      });
+
+      document
+        .getElementById("int")
+        .addEventListener("keypress", function paracli(ev) {
+          document.getElementById("para").innerText += ev.key;
+        });
+
+      document
+        .getElementById("body_ev")
+        .addEventListener("copy", function paracli(ev) {
+          console.log(ev.target.textContent);
+        });
+    </script>
+  </body>
+</html>

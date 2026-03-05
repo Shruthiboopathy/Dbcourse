@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+function clicked(){
+    alert("hai");
+}  
+function dblclick(){
+    alert("double  hai");
+} 
+function changed(){
+    alert("chnaged or blur");
+} 
+
+function win(){
+    alert("window load  hai");
+} 
+
+function mover(){
+    alert("mouse over");
+} 
+    </script>
+ </head>
+ 
+<body onload="win()">
+    <button onclick="clicked()">click here</button>
+    <button ondblclick="dblclick()">click here</button>
+    <input onblur="changed()" type="text" />
+    <p onmouseover="mover()">click  here</p>
+
+ </body>
+ </html>

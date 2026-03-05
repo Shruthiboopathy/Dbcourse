@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array methods</title>
+  </head>
+  <body>
+    <script>
+    //   // 1. CREATING ARRAYS
+      let numbers = [1, 2, 3, 4, 5];
+      let fruits = ["apple", "banana", "mango"];
+
+      console.log("Original Numbers:", numbers);
+      console.log("Original Fruits:", fruits);
+
+      // 2. ADDING & REMOVING ELEMENTS
+
+      // push() – Add to end
+      fruits.push("orange");
+
+      // pop() – Remove from end
+      fruits.pop();
+
+      // unshift() – Add to beginning
+      fruits.unshift("grapes");
+
+      // shift() – Remove from beginning
+      fruits.shift();
+
+      console.log("After Add/Remove:", fruits);
+
+      // 3. LOOPING METHODS
+
+      // forEach() – Loop through array
+      numbers.forEach(function (num) {
+        console.log("forEach value:", num);
+      });
+
+      // 4. TRANSFORMING ARRAYS
+
+      // map() – Create new array
+      let doubled = numbers.map((num) => num * 2);
+      console.log("map (doubled):", doubled);
+
+      // filter() – Filter values
+      let even = numbers.filter((num) => num % 2 === 0);
+      console.log("filter (even):", even);
+
+      // reduce() – Reduce to single value
+      let sum = numbers.reduce((total, num) => total + num, 0);
+      console.log("reduce (sum):", sum);
+
+      //    5. SEARCHING METHODS
+
+      // find() – First matching value
+      let found = numbers.find((num) => num > 3);
+      console.log("find (>3):", found);
+
+      // findIndex() – Index of match
+      let foundIndex = numbers.findIndex((num) => num > 3);
+      console.log("findIndex (>3):", foundIndex);
+
+      // includes() – Check if value exists
+      console.log("includes 3:", numbers.includes(3));
+
+      // indexOf() – First index of value
+      console.log("indexOf 3:", numbers.indexOf(3));
+
+      //    6. SORTING & REVERSING
+
+      // sort() – Ascending
+      let sorted = [...numbers].sort((a, b) => a - b);
+      console.log("sort ascending:", sorted);
+
+      // reverse()
+      let reversed = [...numbers].reverse();
+      console.log("reverse:", reversed);
+
+      //    7. EXTRACTING & MODIFYING
+
+      // slice() – Copy part of array
+      let sliced = numbers.slice(1, 4);
+      console.log("slice (1,4):", sliced);
+
+      // splice() – Remove/Insert elements
+      let spliceExample = [...numbers];
+      spliceExample.splice(2, 1); // remove 1 element from index 2
+      console.log("splice remove index 2:", spliceExample);
+
+      //    8. JOINING & CONVERTING
+
+      // join()
+      console.log("join:", fruits.join(", "));
+
+      // toString()
+      console.log("toString:", fruits.toString());
+
+      //    9. COMBINING ARRAYS
+
+      let arr1 = [1, 2];
+      let arr2 = [3, 4];
+
+      // concat()
+      let combined = arr1.concat(arr2);
+      console.log("concat:", combined);
+
+      // spread operator
+      let combinedSpread = [...arr1, ...arr2];
+      console.log("spread:", combinedSpread);
+
+      //   10. CHECKING CONDITIONS
+      // some() – At least one matches
+      console.log(
+        "some >4:",
+        numbers.some((num) => num > 4),
+      );
+
+      // every() – All match
+      console.log(
+        "every >5:",
+        numbers.every((num) => num > 2),
+      );
+
+      //    11. FLAT METHODS
+      let nested = [1, 2, [3, 4]];
+
+      // flat()
+      console.log("flat:", nested.flat());
+
+      // flatMap()
+      let flatMapped = numbers.flatMap((num) => [num, num * 2]);
+      console.log("flatMap:", flatMapped);
+
+      //  12. FILLING & CREATING ARRAYS
+
+      // fill()
+      let filled = new Array(2).fill(3);
+      console.log("fill:", filled);
+
+      // Array.from()
+      let fromString = Array.from("hello");
+      console.log("Array.from:", fromString);
+
+      //    13. DESTRUCTURING
+
+      let [a, b, c] = numbers;
+      console.log("Destructuring:", a, b, c);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+       array1=[45,"shruthi","Boopathy"];
+
+        console.log(array1);
+        array1.push("56");
+        console.log(array1);
+        array1.pop()
+        console.log(array1);
+        array1.shift();
+        console.log(array1);
+        array1.unshift(65,"ravi");
+        console.log(array1);    
+        array1.splice(2,1,"rajan")//array1.splice(2,0,56,"rajan")
+        console.log(array1); 
+
+   /*     let array2=array1.slice(1,3);
+        console.log(array2); 
+        array3=[1,24,5,23,41,15]
+        
+        
+      //  console.log(array3.sort())
+      //  console.log(array3.reverse());
+        array4=["cat","apple","Ant","Bat", "dog ",56];
+   //  console.log(array4.sort());
+        let array5=array4.reverse();
+
+       // console.log(array5);        
+        //console.log(array4.fill("hai",3,5));
+        let array6=array4.fill("hai",3,5)
+       // console.log(array6);
+
+        console.log(array4.join("-"));
+        console.log(array4.toString());
+        let array7=array3.concat(array6,array4)
+        console.log(array7);
+        console.log(array7.indexOf("hai"))
+        console.log(array7.includ es("Bat"))
+       var total=0;
+
+     array3=[1,24,5,23,41,15]
+     var total=0;
+      array3.forEach(fun_call);
+       
+      function fun_call(value){
+      total+=value; // console.log(value);
+       }     
+       console.log(total)
+
+       let tot=array3.map(funcall)
+              
+       function funcall(value){
+        return value*10;
+       }     
+       for (let j of tot)
+       {
+        console.log(j);
+       } 
+    */
+    array3=[1,24,5,23,41,15]
+    let tot=array3.filter(fncall)   
+       function fncall(value){
+        return value>20;
+       }     
+       for (let j of tot)
+       {
+        console.log(j);
+       }
+        let tota=array3.some(fncall)      
+       function fncall(value){
+        return value>20;
+       }
+       console.log(tota);
+      let total=array3.reduce(fcall)      
+      function fcall(sum,value){
+        return sum+=value;
+       } 
+       console.log(total);
+        
+       let array_key=array3.keys()
+       console.log(array_key);     
+        for (let j of array_key)
+       {
+        console.log(j);
+       }
+
+            const obj={
+        roll:45,
+        student_name:"rajan",
+        student_lastname:"kumar",
+            }
+       let obj_key=Object.keys(obj)
+
+        for (let j of obj_key)
+       {
+        console.log(j);
+       }
+      
+     /*   for (let j of tot)
+       {
+        console.log(j);
+       }  */
+</script>
+</head>
+<body>
+    
+</body>
+</html>

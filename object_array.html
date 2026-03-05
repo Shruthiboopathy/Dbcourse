@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+ const obj={
+    roll:45,
+    student_name:"shruthi",
+    student_lastname:"sabari",
+    fullname: function(){
+return this.student_name + " " + this.student_lastname;
+    }
+ }
+
+ for(let i in obj){
+    console.log(i+""+obj[i])
+ }
+
+  let array3=[32,"ran",true,null];
+
+  for(let i in array3){
+    console.log(array3[i]);
+  }
+
+  let array4=[30,"read",true,null];
+
+  for(let i of array4){
+    console.log(i);
+  }
+
+
+  let string1= "javascript"
+for(let i of string1)
+{
+    console.log(i);
+}
+
+ /*obj.age=25;
+ console.log(obj)
+ var1="hi"
+ obj.roll=56;
+ console.log(obj.roll);
+ alert(obj.student_name);
+ document.write(var1);
+ document.write(obj.roll)
+ console.log(obj["roll"]);
+ console.log(obj.fullname());
+
+ let array1=[45,"rajan",true,null];
+ console.log(array1["0"])
+ console.log(array1["1"])
+ array1["1"]="sai"
+ for(i=0;i<array1.length;i++){
+ console.log(array1[i]);
+ }
+
+let array2= new Array("shri",53,true)
+console.log(array2);*/
+
+</script>
+</head>
+<body>
+    <div id="demo">
+
+    </div>
+    <script>
+        document.getElementById("demo").innerText=array1;
+    </script>
+    
+</body>
+</html>

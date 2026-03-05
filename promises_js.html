@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Promise </title>
+</head>
+<body>
+
+<script>
+
+// ===============================
+// 1️⃣ Simple Promise (== comparison)
+// ===============================
+let p = new Promise((resolve, reject) => {
+    let a = 45;
+    let b = "45";
+
+    if (a == b) {          // loose comparison (type coercion)
+        resolve("Loose comparison success");
+    } else {
+        reject("Loose comparison failed");
+    }
+});
+
+p.then(result => console.log(result))
+ .catch(error => console.log(error));
+
+
+// ===============================
+// 2️⃣ Async Promise using setTimeout
+// ===============================
+function getData() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Data received after 2 seconds");
+        }, 2000);
+    });
+}
+
+getData()
+    .then(result => console.log(result));
+
+console.log("Hello after calling getData");
+
+
+// ===============================
+// 3️⃣ Strict Comparison Promise (===)
+// ===============================
+function getStrictData() {
+    return new Promise((resolve, reject) => {
+        let a = 45;
+        let b = "45";
+
+        if (a === b) {     // strict comparison (checks type also)
+            resolve("Strict comparison success");
+        } else {
+            reject("Strict comparison failed");
+        }
+    });
+}
+
+getStrictData()
+    .then(result => console.log(result))
+    .catch(error => console.log(error));
+
+console.log("End of script");
+
+</script>
+
+</body>
+</html>

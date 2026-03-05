@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread & Rest Examples</title>
+  </head>
+  <body>
+    <script>
+      /* ======================================================
+   1️⃣ ARRAY COPYING
+====================================================== */
+
+      // Original array
+      let originalArray = ["alpha", "beta"];
+
+      // ❌ Wrong way (Reference copy)
+      // let copyArray = originalArray;
+      // copyArray.push("new");
+      // This will modify originalArray too.
+
+      // ✅ Correct way (Spread operator creates shallow copy)
+      let copyArray = [...originalArray];
+      copyArray.push("gamma");
+
+      console.log("Original Array:", originalArray);
+      console.log("Copied Array:", copyArray);
+
+      /* ======================================================
+   2️⃣ OBJECT COPYING
+====================================================== */
+
+      let obj1 = { roll: 45 };
+
+      // Spread creates shallow copy
+      let obj2 = { ...obj1 };
+
+      obj2.roll = 56;
+
+      console.log("Original Object:", obj1);
+      console.log("Copied Object:", obj2);
+
+      /* ======================================================
+   3️⃣ ARRAY MERGING
+====================================================== */
+
+      let array1 = ["raj", "kannan"];
+
+      let mergedArray = [...array1, ...originalArray, ...array1];
+
+      console.log("Merged Array:", mergedArray);
+
+      /* ======================================================
+   4️⃣ OBJECT MERGING
+====================================================== */
+
+      let obj3 = { age: 23 };
+
+      let mergedObject = { ...obj1, ...obj2, ...obj3 };
+
+      // Last value overrides previous ones
+      console.log("Merged Object:", mergedObject);
+
+      /* ======================================================
+   5️⃣ Math.max() and Math.min() with Spread
+====================================================== */
+
+      let numbers = [10, 9, 8, 1, 0];
+
+      let maximum = Math.max(...numbers);
+      let minimum = Math.min(...numbers);
+
+      console.log("Maximum:", maximum);
+      console.log("Minimum:", minimum);
+
+      /* ======================================================
+   6️⃣ ARRAY DESTRUCTURING WITH REST
+====================================================== */
+
+      let destructArray = [45, 56, 78, 90, 989];
+
+      let [first, second, ...remaining] = destructArray;
+
+      console.log("First:", first);
+      console.log("Second:", second);
+      console.log("Remaining:", remaining);
+
+      /* ======================================================
+   7️⃣ OBJECT DESTRUCTURING WITH REST
+====================================================== */
+
+      let person = {
+        roll: 45,
+        age: 23,
+        fname: "raj",
+        state: "tn",
+        code: 600053,
+      };
+
+      let { roll, age, ...others } = person;
+
+      console.log("Roll:", roll);
+      console.log("Age:", age);
+      console.log("Other Properties:", others);
+
+      /* ======================================================
+   8️⃣ REST PARAMETER FUNCTION
+====================================================== */
+
+      function addNumbers(...numbers) {
+        let total = 0;
+
+        for (let num of numbers) {
+          total += num;
+        }
+
+        console.log("Numbers:", numbers);
+        console.log("Total:", total);
+      }
+
+      addNumbers(1, 2, 3);
+      addNumbers(1, 2, 3, 4, 5, 6);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring </title>
+</head>
+<body>
+
+<script>
+
+/* ======================================================
+   1️⃣ ARRAY DESTRUCTURING (ES6)
+   ====================================================== */
+
+let array1 = [45, 56, 78, 90];
+
+// Skipping first two values
+let [ , , var2, var3 ] = array1;
+
+console.log("Array Destructuring:");
+console.log("var2:", var2);   // 78
+console.log("var3:", var3);   // 90);
+
+
+
+/* ======================================================
+   2️⃣ OBJECT DESTRUCTURING
+   ====================================================== */
+
+let obj = {
+    roll: 45,
+    fname: "raj"
+};
+
+let { roll, fname } = obj;
+
+console.log("\nObject Destructuring:");
+console.log("roll:", roll);
+console.log("fname:", fname);
+
+
+
+/* ======================================================
+   3️⃣ NESTED OBJECT DESTRUCTURING
+   ====================================================== */
+
+let obj1 = {
+    s_roll: 75,
+    age: 25,
+    fullname: {
+        firstname: "rajan",
+        lastname: "kumar"
+    }
+};
+
+// Extracting nested values
+let {
+    s_roll,
+    age,
+    fullname: { firstname, lastname }
+} = obj1;
+
+console.log("\nNested Object Destructuring:");
+console.log("s_roll:", s_roll);
+console.log("age:", age);
+console.log("firstname:", firstname);
+console.log("lastname:", lastname);
+
+
+
+/* ======================================================
+   4️⃣ OBJECT PROPERTY SHORTHAND (OBJECT ENHANCEMENT)
+   ====================================================== */
+
+let st_roll = 57;
+let s_age = 22;
+let s_firstname = "raj";
+let s_lastname = "kannan";
+
+// Instead of writing st_roll: st_roll
+let obj2 = { st_roll, s_age, s_firstname, s_lastname };
+
+console.log("\nObject Property Shorthand:");
+console.log(obj2);
+
+
+
+/* ======================================================
+    FEATURES USED
+   ======================================================
+   ✔ Array Destructuring
+   ✔ Object Destructuring
+   ✔ Nested Destructuring
+   ✔ Object Property Shorthand
+   ✔ ES6 (ECMAScript 2015) Concepts
+   ====================================================== */
+
+</script>
+
+</body>
+</html>

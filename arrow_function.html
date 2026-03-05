@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /* function add(a,b){
+    return console.log(a+b);
+}
+add(4,5);
+
+let add=()=>4+5;
+
+let array1=[45,67,78]
+let tot=0;
+
+array1.forEach(function sum(v){
+tot+=v;
+})
+console.log(tot);
+
+*/
+
+      let array1 = [45, 67, 78];
+      let tot = 0;
+
+      array1.forEach((v) => {
+        tot += v;
+      });
+      console.log(tot);
+
+      let arra2 = array1.map(function (v) {
+        return v * 10;
+      });
+
+      let arra3 = array1.map((v) => {
+        return v * 10;
+      });
+
+      console.log(arra2);
+      console.log(arra3);
+
+      let obj = [
+        { name: "raj", roll: 45 },
+        { name: "kumar", roll: 45 },
+      ];
+      let obj_names = obj.map((v) => v.name);
+      console.log(obj_names);
+
+      obj.forEach((v) => console.log(v.name + " " + v.roll));
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

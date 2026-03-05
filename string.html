@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+    let str1="shruthi,sabari,sai,thanvik";
+    console.log(str1.length)
+
+    let str2=str1.substring(4,11);
+    console.log(str2);
+
+    let str3=str1.slice(4,12);
+    console.log(str3);
+
+    let str4=str1.substr(4,11);
+    console.log(str4);
+
+    let str5=" java script  ";
+    console.log(str5.length);
+
+    let str6= str5.trim();
+    console.log(str6);
+    console.log(str6.length);
+
+    let str7= str5.trimStart();
+    console.log(str7);
+    console.log(str7.length);
+
+    let str8= str5.trimEnd();
+    console.log(str8);
+    console.log(str8.length);
+
+    let str9="java";
+    let str10=str9.padEnd(5,"a");
+    console.log(str10);
+
+    let str11=str9.padStart(7,"a");
+    console.log(str11);
+
+    let str12="sai, sathya, sri  , sudhasrire";
+    let str13=str12.replace("sri", "car");
+    console.log(str13);
+    let str14=str12.replaceAll("sri", "car");
+    console.log(str14);
+
+    let str15=str12.charAt("8");
+    console.log(str15);
+
+    let str16=str12.charCodeAt("a");
+    console.log(str16);
+
+    let str17="java SCRIPT";
+    console.log(str17.toUpperCase());
+    console.log(str17.toLowerCase());
+
+    let str18=str17.concat(str10,str11);
+    console.log(str18);
+    console.log(str18.length);
+    console.log(str17.indexOf("j"));
+    
+//string to array conversion//
+    let array1=str1.split("r");
+    console.log(array1);
+
+    let str19=array1.reverse();
+    console.log(str19);
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

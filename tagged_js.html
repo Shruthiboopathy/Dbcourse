@@ -1,0 +1,106 @@
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      /*         let greet=`welcome ${f_name} ${lastname}             
+
+    to ${sum(56,45)} my world  ${a*b}`;
+   console.log(greet)
+ */
+
+      /* var f_name="rajan";
+var lastname="kumar"
+a=10;
+b=23;
+function sum(a,b){
+    return a+b;
+}
+ */
+      function tagg(a) {
+        console.log(`welcome ${a[0]}`);
+      }
+      tagg`raj hello good`;
+
+      elcome = "HELLO";
+      a = "RAJ";
+
+      function Taggeda(first, str1, str2) {
+        console.log(
+          `${first[0]}${str1} ${first[1]} ${str2} ${first[2]} ${first[3]} `,
+        );
+      }
+
+      Taggeda`Hello  welcome  to the world`; //arr[0,1],var
+      Taggeda`Hello ${a}   welcome ${elcome} to the world`; // arr[0,1,2],var1,var2
+      Taggeda`Hello  welcome ${a} ${elcome} to ${a} the world`; // arr[0,1,2,3],var1,var2
+
+      console.log(`Hello \n World \n &$  @ ()Welcome \t back! `);
+      var rawText = String.raw`Hello \n World \n &$  @ ()Welcome \t back! `;
+
+      console.log(rawText);
+    </script>
+  </head>
+  <body>
+    <pre>
+          welcome
+                 
+            function sum(){
+            return("welcome")
+            }
+        
+    to my world`;
+    </pre>
+  </body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tagged</title>
+  </head>
+  <body>
+    <script>
+      /* ==============================
+   1️⃣ Template Literal
+================================= */
+
+      let firstName = "Rajan";
+      let lastName = "Kumar";
+
+      function sum(x, y) {
+        return x + y;
+      }
+
+      let message = `Welcome ${firstName} ${lastName}
+Sum is ${sum(10, 20)}`;
+
+      console.log(message);
+
+      /* ==============================
+   2️⃣ Tagged Template Literal
+================================= */
+
+      let user = "RAJ";
+      let city = "Chennai";
+
+      function customTag(strings, ...values) {
+        console.log("Strings:", strings);
+        console.log("Values:", values);
+      }
+
+      customTag`Hello ${user} welcome to ${city}`;
+
+      /* ==============================
+   3️⃣ String.raw()
+================================= */
+
+      console.log(`Line1 \n Line2`);
+      console.log(String.raw`Line1 \n Line2`);
+    </script>
+  </body>
+</html>

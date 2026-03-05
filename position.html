@@ -1,0 +1,97 @@
+<!--DAY 7-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .position_pro {
+        height: 300px;
+        width: 300px;
+        background-color: aqua;
+        position: static;
+        top: 0px;
+        left: 0px;
+        display: inline-block;
+      }
+
+      .fixed_po {
+        height: 100px;
+        width: 100px;
+        background-color: rgb(9, 255, 0);
+        position: fixed;
+        top: 100px;
+        right: 150px;
+      }
+
+      .position_sti {
+        height: 100px;
+        width: 100px;
+        border-radius: 10cm;
+        background-color: rgb(209, 85, 102);
+        position: sticky;
+        top: 150px;
+        left: 150px;
+      }
+      .position_rel {
+        height: 100px;
+        width: 100px;
+        background-color: rgb(255, 0, 0);
+        position: relative;
+        top: 20px;
+        left: 100px;
+      }
+      .absolute_rel {
+        height: 100px;
+        width: 100px;
+        background-color: rgb(208, 255, 0);
+        position: absolute;
+        right: 250px;
+        top: 0px;
+      }
+      .parent_div {
+        height: 300px;
+        width: 300px;
+        padding: 20px;
+        margin-top: 100px;
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 100px;
+        background-color: rgb(96, 69, 180);
+      }
+      .gr_parent_div {
+        height: 600px;
+        width: 600px;
+        background-color: rgb(0, 255, 115);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="position_pro">
+      <h4>position pro</h4>
+    </div>
+
+    <div class="position_sti">
+      <h4>sticky position</h4>
+    </div>
+
+    <div class="fixed_po">
+      <h4>fixed position</h4>
+    </div>
+
+    <div class="position_rel">
+      <h4>relative position</h4>
+    </div>
+
+    <div class="gr_parent_div">
+      <h4>gr parent</h4>
+      <div class="parent_div">
+        <h4>parent div</h4>
+        <div class="absolute_rel">
+          <h4>absolute position</h4>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

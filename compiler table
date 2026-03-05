@@ -1,0 +1,44 @@
+
+
+create table student_detail (roll_no int, student_name varchar(50),age int); 
+
+insert into student_detail (student_name,roll_no,age) values ('raj',45,25);
+
+
+insert into student_detail values (35,'kanana',15),(25,'raja',27),(21,"kumar",31);
+
+
+select * from student_detail;
+
+select roll_no,student_name from student_detail;
+
+insert into student_detail values (45,15,34);
+
+select * from student_detail;
+
+update student_detail SET student_name='arun',roll_no=15 where age=34;
+
+select * from student_detail;
+
+alter table student_detail ADD mobile_number int(20);
+
+select * from student_detail;
+
+alter table student_detail MODIFY mobile_number varchar(20);
+
+alter table student_detail RENAME column age to stu_age;
+
+update student_detail SET mobile_number=23445678990 where stu_age=34;
+
+alter table student_detail drop column mobile_number;
+
+alter table student_detail ADD primary key(roll_no);
+
+select * from student_detail;
+
+describe student_detail;
+
+show columns from student_detail;
+
+
+desc student_detail;

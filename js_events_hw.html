@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      
+/*HTML INLINE EVENT (onclick inside HTML)*/
+
+// Example HTML:
+// <button onclick="inlineClick()">Inline Click</button>
+
+function inlineClick() {
+  console.log("Inline Event Triggered");
+}
+
+
+/*
+  DOM PROPERTY EVENT (element.onclick)
+*/
+const btn1 = document.createElement("button");
+btn1.textContent = "DOM Property Click";
+document.body.appendChild(btn1);
+
+btn1.onclick = function () {
+  console.log("DOM Property Event Triggered");
+};
+
+
+/*
+   addEventListener() METHOD
+*/
+const btn2 = document.createElement("button");
+btn2.textContent = "addEventListener Click";
+document.body.appendChild(btn2);
+
+function handleClick() {
+  console.log("addEventListener Triggered");
+}
+
+btn2.addEventListener("click", handleClick);
+
+
+/*
+  removeEventListener()
+*/
+const btn3 = document.createElement("button");
+btn3.textContent = "Remove Event Listener";
+document.body.appendChild(btn3);
+
+function removableEvent() {
+  console.log("This will run only once");
+}
+
+btn3.addEventListener("click", removableEvent);
+
+setTimeout(() => {
+  btn3.removeEventListener("click", removableEvent);
+  console.log("Event Listener Removed after 5 seconds");
+}, 5000);
+
+
+/*
+ EVENT OBJECT
+*/
+document.addEventListener("click", function (event) {
+  console.log("Event Type:", event.type);
+  console.log("Target Element:", event.target);
+});
+
+
+// /************************************************************
+//   6️⃣ EVENT BUBBLING
+// ************************************************************/
+// const parent = document.createElement("div");
+// parent.style.padding = "20px";
+// parent.style.background = "lightblue";
+
+// const child = document.createElement("button");
+// child.textContent = "Bubbling Button";
+
+// parent.appendChild(child);
+// document.body.appendChild(parent);
+
+// parent.addEventListener("click", function () {
+//   console.log("Parent Clicked (Bubbling)");
+// });
+
+// child.addEventListener("click", function () {
+//   console.log("Child Clicked");
+// });
+
+
+// /************************************************************
+//   7️⃣ EVENT CAPTURING
+// ************************************************************/
+// parent.addEventListener(
+//   "click",
+//   function () {
+//     console.log("Parent Capturing");
+//   },
+//   true // useCapture = true
+// );
+
+
+// /************************************************************
+//   8️⃣ stopPropagation()
+// ************************************************************/
+// child.addEventListener("click", function (e) {
+//   e.stopPropagation();
+//   console.log("Propagation Stopped");
+// });
+
+
+// /************************************************************
+//   9️⃣ preventDefault()
+// ************************************************************/
+// // Example HTML:
+// // <a href="https://google.com" id="link">Go to Google</a>
+
+// const link = document.createElement("a");
+// link.href = "https://google.com";
+// link.textContent = "Prevent Default Link";
+// document.body.appendChild(link);
+
+// link.addEventListener("click", function (e) {
+//   e.preventDefault();
+//   console.log("Default action prevented");
+// });
+
+
+// /************************************************************
+//   🔟 once OPTION (Runs only once)
+// ************************************************************/
+// const btn4 = document.createElement("button");
+// btn4.textContent = "Run Once Button";
+// document.body.appendChild(btn4);
+
+// btn4.addEventListener(
+//   "click",
+//   function () {
+//     console.log("This runs only once");
+//   },
+//   { once: true }
+// );
+
+
+// /************************************************************
+//   1️⃣1️⃣ PASSIVE EVENT LISTENER
+// ************************************************************/
+// window.addEventListener(
+//   "scroll",
+//   function () {
+//     console.log("Scrolling...");
+//   },
+//   { passive: true }
+// );
+
+
+/*
+  KEYBOARD EVENTS
+*/
+document.addEventListener("keydown", function (e) {
+  console.log("Key Pressed:", e.key);
+});
+
+
+/*
+  MOUSE EVENTS
+  */
+document.addEventListener("dblclick", function () {
+  console.log("Double Clicked");
+});
+
+document.addEventListener("mouseover", function () {
+  console.log("Mouse Over");
+});
+
+
+/*
+  FORM EVENTS
+*/
+const form = document.createElement("form");
+const input = document.createElement("input");
+input.placeholder = "Type something";
+
+form.appendChild(input);
+document.body.appendChild(form);
+
+input.addEventListener("focus", () => console.log("Input Focused"));
+input.addEventListener("blur", () => console.log("Input Blurred"));
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  console.log("Form Submitted");
+});
+
+
+/*
+  INPUT EVENT
+*/
+input.addEventListener("input", function (e) {
+  console.log("Input Value:", e.target.value);
+});
+
+
+/*
+  LOAD EVENT
+*/
+window.addEventListener("load", function () {
+  console.log("Page Fully Loaded");
+});
+
+
+/*
+  RESIZE EVENT
+*/
+window.addEventListener("resize", function () {
+  console.log("Window Resized");
+});
+
+
+/*
+  CUSTOM EVENTS
+*/
+const customEvent = new Event("myCustomEvent");
+
+document.addEventListener("myCustomEvent", function () {
+  console.log("Custom Event Triggered");
+});
+
+document.dispatchEvent(customEvent);
+
+
+    </script>
+</body>
+</html>

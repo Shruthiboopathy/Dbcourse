@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+
+    <style>
+      p {
+        display: inline-block;
+        height: 300px;
+        width: 50%;
+      }
+
+      img {
+        height: 300px;
+        width: 45%;
+      }
+      /* flex */
+      .container {
+        display:flex;
+      }
+      
+      .cam_container {
+        display: flex;
+        padding: 2%;
+      }
+      .items {
+        width: 21%;
+        padding: 2%;
+      }
+      .items img {
+        width: 100%;
+        border-radius: 5%;
+        height: 195px;
+      }
+      .items h1 {
+        text-align: center;
+      }
+      .arrahman {
+        background-color: #eee;
+      }
+      .arrahman h1 {
+        padding-top: 2%;
+        text-align: center;
+      }
+      /* grid value*/
+      .container {
+        display: grid;
+        grid-template-columns: 200px 300px 1fr;
+        grid-gap: 20px;
+        grid-template-rows: 1fr 2fr;
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+      }
+      .first_item {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+      .second_item {
+        grid-column-start: 2;
+        grid-column-end: 4;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+    <div class="container">
+      <div class="first_item">
+        <h1>heading1</h1>
+      </div>
+      <div class="second_item">
+        <h1>heading2</h1>
+      </div>
+      <div class="third_item">
+        <h1>heading3</h1>
+      </div>
+      <div class="fourth_item">
+        <h1>heading4</h1>
+      </div>
+      <div class="fifth_item">
+        <h1>heading5</h1>
+      </div>
+      <div class="sixth_item">
+        <h1>heading6</h1>
+      </div>
+    </div> -->
+    
+
+    <div class="container">
+      <h1>heading1</h1>
+      <img src="arrahman.jpg" />
+      <img src="arrahman.jpg" />
+      <h1>heading1</h1>
+      <img src="arrahman.jpg" />
+      <h1>heading1</h1>
+    </div>
+
+    <section class="arrahman">
+      <h1>Anna University</h1>
+      <div class="cam_container">
+        <div class="items">
+          <img src="arrahman.jpg" />
+          <h1>heading1</h1>
+        </div>
+        <div class="items">
+          <img src="arrahman.jpg" />
+          <h1>heading2</h1>
+        </div>
+        <div class="items">
+          <img src="arrahman.jpg" />
+          <h1>heading1</h1>
+        </div>
+        <div class="items">
+          <img src="arrahman.jpg" />
+          <h1>heading1</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="arrahman.jpg" />
+          <h1>heading1</h1>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="arrahman.jpg" />
+          <h1>heading1</h1>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="arrahman.jpg" />
+          <h1>heading1</h1>
+        </div>
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <img src="arrahman.jpg" />
+          <h1>heading1</h1>
+        </div>
+      </div>
+    </section>
+    <input type="text" />
+    <address>no1</address>
+  </body>
+</html>

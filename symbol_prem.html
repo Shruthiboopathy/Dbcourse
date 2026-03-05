@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         let a=Symbol("a"); // symbol datatype
+        console.log(a)
+         console.log(typeof(a))
+        let b=Symbol("a")
+        console.log(b) 
+
+        if(a==b){
+            console.log("true")
+        }
+        else{
+            console.log("false")
+        }
+ 
+        let roll_no =Symbol("roll_no");
+
+         let per_obj={
+            [roll_no]:45,
+            age:30,
+            gender:"female"
+        }
+        console.log(per_obj)
+        console.log(per_obj.age,per_obj["gender"],per_obj[roll_no] )
+       
+        for (let i in per_obj){
+            console.log(per_obj[i])
+        } 
+        let per_obj2={
+            [roll_no]:45,
+            age:30,
+            gender:"female"
+        }
+
+        let lib_obj={
+            roll_no:45,
+            book_taken:4
+        }
+        let mer_obj={...per_obj2,...lib_obj}
+        console.log(mer_obj);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

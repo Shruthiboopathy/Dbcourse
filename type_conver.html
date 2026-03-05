@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* implicit type conversion */
+        let a="45"
+        let b=3;
+        console.log(typeof(b));
+        b+=a; 
+        console.log(typeof(b));
+
+        console.log(typeof(a));
+        a-=b;
+        console.log(typeof(a)); 
+/* munual conversion */
+
+let var1=45;
+let bool=false;
+var var2 =String(bool);
+console.log(typeof(var2));
+
+    var3="45";
+    var4=Number(var3);
+console.log(typeof(var4));
+    
+    var5="4.8";
+    var6=Number(var5);
+    console.log(typeof(var5));
+    console.log(typeof(var6));
+    console.log(var6)
+    
+    var5="45 8";
+    var6=Number(var5);
+    console.log(typeof(var5));
+    console.log(typeof(var6));
+    console.log(var6)
+    
+        var5="fggh";
+    var6=Number(var5);
+    console.log(typeof(var5));
+    console.log(typeof(var6));
+    console.log(var6)
+
+    var6=Number(bool)
+    console.log(typeof(bool));
+    console.log(typeof(var6));
+    console.log(var6)
+   
+    var6=9; //  0,"",undefined,NaN,null return false
+    var7=var6.toString();
+    console.log(typeof(var7))
+    console.log(Boolean(var6));
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
